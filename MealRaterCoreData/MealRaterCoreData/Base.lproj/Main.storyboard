@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="85" id="9pp-mZ-T5P">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealRatingCell" rowHeight="85" id="9pp-mZ-T5P">
                                         <rect key="frame" x="0.0" y="50" width="393" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pp-mZ-T5P" id="d2A-NK-cLr">
@@ -74,7 +74,7 @@
         <!--Meals View Controller-->
         <scene sceneID="bqA-CM-IaW">
             <objects>
-                <viewController id="EF5-Dz-J9I" customClass="MealsViewController" customModule="MealRater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EF5-Dz-J9I" customClass="MealsViewController" customModule="MealRaterCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1wS-53-reO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +276,7 @@
         <!--Meal Rating View Controller-->
         <scene sceneID="h2a-WH-u2o">
             <objects>
-                <viewController id="wWg-ZQ-Ryf" customClass="MealRatingViewController" customModule="MealRater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wWg-ZQ-Ryf" customClass="MealRatingViewController" customModule="MealRaterCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xcb-CU-bIN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

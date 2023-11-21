@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import CoreData
 
+public var listOfMealRatings = [MealRatings]()
 class MealsTableViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,10 +23,11 @@ class MealsTableViewController: UIViewController {
 
 extension MealsTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 25
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let mealRatingCell = tableView.dequeueReusableCell(withIdentifier: "MealRatingCell", for: <#T##IndexPath#>)
         return UITableViewCell()
     }
     
