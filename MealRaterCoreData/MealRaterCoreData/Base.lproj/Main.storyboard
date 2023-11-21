@@ -250,6 +250,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
+                                    <action selector="saveMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="lqe-rK-tVy"/>
                                     <action selector="saveRating:" destination="wWg-ZQ-Ryf" eventType="touchUpInside" id="18s-Ht-Iy4"/>
                                 </connections>
                             </button>
@@ -259,6 +260,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                 <connections>
                                     <action selector="cancel:" destination="wWg-ZQ-Ryf" eventType="touchUpInside" id="8PG-ZQ-PcG"/>
+                                    <action selector="cancel:" destination="tdy-Qm-97t" eventType="touchUpInside" id="h33-C3-Wgr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdc-4X-Fsg">

@@ -105,5 +105,24 @@ class MealViewController: UIViewController {
         rateFourBtn.backgroundColor = .clear
         mealRating.text = "5"
     }
-
+    
+    @IBAction func cancel(_ sender: Any) {
+        rateOneBtn.backgroundColor = .clear
+        rateTwoBtn.backgroundColor = .clear
+        rateThreeBtn.backgroundColor = .clear
+        rateFourBtn.backgroundColor = .clear
+        rateFiveBtn.backgroundColor = .clear
+        mealRating.text = "Label" // clear the rating
+        //go back to home screen
+        _ = self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func saveMealRating(_ sender: Any) {
+        //save the meal rating into CoreData
+        //context
+        //entity
+        //set all the attributes of the MealRating entity
+        //do try context.save()
+        
+    }
 }
