@@ -14,10 +14,10 @@
 		081A93AF2B0C9C08006CF12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081A93AD2B0C9C08006CF12C /* LaunchScreen.storyboard */; };
 		0820EE6A2B0C9E20009A2022 /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE692B0C9E20009A2022 /* MealsTableViewController.swift */; };
 		0820EE6C2B0C9F3D009A2022 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE6B2B0C9F3D009A2022 /* MealViewController.swift */; };
-		0820EE6F2B0C9FAC009A2022 /* MealRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE6E2B0C9FAC009A2022 /* MealRatingViewController.swift */; };
-		0820EE7B2B0CB07B009A2022 /* MealRating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE792B0CB07B009A2022 /* MealRating.xcdatamodeld */; };
+		0820EE7B2B0CB07B009A2022 /* MealRaterCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE792B0CB07B009A2022 /* MealRaterCoreData.xcdatamodeld */; };
 		0820EE7E2B0CB0DC009A2022 /* MealRatings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE7C2B0CB0DC009A2022 /* MealRatings+CoreDataClass.swift */; };
 		0820EE7F2B0CB0DC009A2022 /* MealRatings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE7D2B0CB0DC009A2022 /* MealRatings+CoreDataProperties.swift */; };
+		0820EE812B0DE547009A2022 /* MealRatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820EE802B0DE547009A2022 /* MealRatingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		081A93B02B0C9C08006CF12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0820EE692B0C9E20009A2022 /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 		0820EE6B2B0C9F3D009A2022 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
-		0820EE6E2B0C9FAC009A2022 /* MealRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRatingViewController.swift; sourceTree = "<group>"; };
 		0820EE7A2B0CB07B009A2022 /* MealRating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealRating.xcdatamodel; sourceTree = "<group>"; };
 		0820EE7C2B0CB0DC009A2022 /* MealRatings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealRatings+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0820EE7D2B0CB0DC009A2022 /* MealRatings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealRatings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0820EE802B0DE547009A2022 /* MealRatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRatingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			children = (
 				0820EE692B0C9E20009A2022 /* MealsTableViewController.swift */,
 				0820EE6B2B0C9F3D009A2022 /* MealViewController.swift */,
-				0820EE6E2B0C9FAC009A2022 /* MealRatingViewController.swift */,
+				0820EE802B0DE547009A2022 /* MealRatingTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			children = (
 				0820EE7C2B0CB0DC009A2022 /* MealRatings+CoreDataClass.swift */,
 				0820EE7D2B0CB0DC009A2022 /* MealRatings+CoreDataProperties.swift */,
-				0820EE792B0CB07B009A2022 /* MealRating.xcdatamodeld */,
+				0820EE792B0CB07B009A2022 /* MealRaterCoreData.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -169,14 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0820EE6F2B0C9FAC009A2022 /* MealRatingViewController.swift in Sources */,
 				0820EE7F2B0CB0DC009A2022 /* MealRatings+CoreDataProperties.swift in Sources */,
-				0820EE7B2B0CB07B009A2022 /* MealRating.xcdatamodeld in Sources */,
+				0820EE7B2B0CB07B009A2022 /* MealRaterCoreData.xcdatamodeld in Sources */,
 				081A93A02B0C9C07006CF12C /* AppDelegate.swift in Sources */,
 				0820EE7E2B0CB0DC009A2022 /* MealRatings+CoreDataClass.swift in Sources */,
 				0820EE6C2B0C9F3D009A2022 /* MealViewController.swift in Sources */,
 				0820EE6A2B0C9E20009A2022 /* MealsTableViewController.swift in Sources */,
 				081A93A22B0C9C07006CF12C /* SceneDelegate.swift in Sources */,
+				0820EE812B0DE547009A2022 /* MealRatingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +401,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0820EE792B0CB07B009A2022 /* MealRating.xcdatamodeld */ = {
+		0820EE792B0CB07B009A2022 /* MealRaterCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				0820EE7A2B0CB07B009A2022 /* MealRating.xcdatamodel */,
 			);
 			currentVersion = 0820EE7A2B0CB07B009A2022 /* MealRating.xcdatamodel */;
-			path = MealRating.xcdatamodeld;
+			path = MealRaterCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

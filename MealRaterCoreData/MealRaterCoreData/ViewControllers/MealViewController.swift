@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MealViewController: UIViewController {
 
@@ -19,12 +20,30 @@ class MealViewController: UIViewController {
     @IBOutlet var rateFourBtn: UIButton!
     @IBOutlet var rateFiveBtn: UIButton!
     @IBOutlet var rateThreeBtn: UIButton!
+    var selectedMealRating: MealRatings? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         formatButtons() //display the rating buttons in a particular format
+        if(selectedMealRating != nil) {
+            restaurantName.text = selectedMealRating?.restaurant
+            meal.text = selectedMealRating?.meal
+            let selectedRating = selectedMealRating?.rating
+            if  selectedRating == "1" {
+                rateOneBtn.backgroundColor = .blue
+            }else if selectedRating == "2" {
+                rateTwoBtn.backgroundColor = .blue
+            }else if selectedRating == "3" {
+                rateThreeBtn.backgroundColor = .blue
+            }else if selectedRating == "4" {
+                rateFourBtn.backgroundColor = .blue
+            }else if selectedRating == "5" {
+                rateFiveBtn.backgroundColor = .blue
+            }
+            mealRating.text = selectedRating
+        }
     }
     
     func formatButtons() {
@@ -121,8 +140,50 @@ class MealViewController: UIViewController {
         //save the meal rating into CoreData
         //context
         //entity
-        //set all the attributes of the MealRating entity
-        //do try context.save()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        if(selectedMealRating == nil) {
+            let entity = NSEntityDescription.entity(forEntityName: "MealRatings", in: context)
+            let newMeal = MealRatings(entity: entity!, insertInto: context)
+            
+            //set all the attributes of the MealRatings entity
+            newMeal.mID = UUID()
+            newMeal.meal = meal.text
+            newMeal.restaurant = restaurantName.text
+            newMeal.rating = mealRating.text
+            
+            //do try context.save()
+            if context.hasChanges {
+                do {
+                    try context.save()
+                    listOfMealRatings.append(newMeal)
+                    //after saving navigate to root view controller
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                } catch {
+                    print("Context save error and Error in saving data \(error)")
+                }
+            }
+        } else {
+            let request = NSFetchRequest<MealRatings>(entityName: "MealRatings")
+            
+            do {
+                try listOfMealRatings = context.fetch(request)
+                for m in listOfMealRatings {
+                    if(m == selectedMealRating) {
+                        m.meal = meal.text
+                        m.restaurant = restaurantName.text
+                        m.rating = mealRating.text
+                        try context.save()
+                        //after saving navigate to root view controller
+                        _ = self.navigationController?.popToRootViewController(animated: true)
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
+        
         
     }
 }
