@@ -10,7 +10,11 @@ import UIKit
 class MealsViewController: UIViewController, MealRatingVCDelegate {
     func saveRating(mealRating: String) {
         //display the meal rating on the label
-        dishRating.text = mealRating
+        if mealRating.isEmpty {
+            dishRating.text = "Label"
+        } else {
+            dishRating.text = mealRating
+        }
     }
     
     @IBOutlet var restaurantName: UITextField!
@@ -26,6 +30,7 @@ class MealsViewController: UIViewController, MealRatingVCDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Meal Rater"
     }
     
     @IBAction func rateMeal(_ sender: UIButton) {

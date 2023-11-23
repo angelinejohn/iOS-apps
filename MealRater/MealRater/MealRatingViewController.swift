@@ -12,7 +12,7 @@ protocol MealRatingVCDelegate : NSObjectProtocol{
 }
 
 class MealRatingViewController: UIViewController {
-
+    //outlets and initializations
     @IBOutlet var cancelBtn: UIButton!
     
     @IBOutlet var saveBtn: UIButton!
@@ -27,7 +27,14 @@ class MealRatingViewController: UIViewController {
     
     @IBOutlet var rateFive: UIButton!
     
-    var mealRating = String() //rating that is passed on from the home page
+    enum RateAs: String {
+        case one = "1"
+        case two = "2"
+        case three = "3"
+        case four = "4"
+        case five = "5"
+    }
+    var mealRating: String? = nil //rating that is passed on from the home page
     var mealRateDelegate: MealRatingVCDelegate? //rating selected and saved
     
     override func viewDidLoad() {
@@ -35,15 +42,15 @@ class MealRatingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         formatButtons() //display the rating buttons in a particular format
-        if  mealRating == "1" {
+        if  mealRating == RateAs.one.rawValue {
             rateOne.backgroundColor = .blue
-        }else if mealRating == "2" {
+        }else if mealRating == RateAs.two.rawValue {
             rateTwo.backgroundColor = .blue
-        }else if mealRating == "3" {
+        }else if mealRating == RateAs.three.rawValue {
             rateThree.backgroundColor = .blue
-        }else if mealRating == "4" {
+        }else if mealRating == RateAs.four.rawValue {
             rateFour.backgroundColor = .blue
-        }else if mealRating == "5" {
+        }else if mealRating == RateAs.five.rawValue {
             rateFive.backgroundColor = .blue
         }
     }
@@ -84,7 +91,7 @@ class MealRatingViewController: UIViewController {
         rateThree.backgroundColor = .clear
         rateFour.backgroundColor = .clear
         rateFive.backgroundColor = .clear
-        mealRating = "1"
+        mealRating = RateAs.one.rawValue
     }
     
     @IBAction func rateTwoBtn(_ sender: Any) {
@@ -94,7 +101,7 @@ class MealRatingViewController: UIViewController {
         rateThree.backgroundColor = .clear
         rateFour.backgroundColor = .clear
         rateFive.backgroundColor = .clear
-        mealRating = "2"
+        mealRating = RateAs.two.rawValue
     }
     
     @IBAction func rateThreeBtn(_ sender: Any) {
@@ -104,7 +111,7 @@ class MealRatingViewController: UIViewController {
         rateTwo.backgroundColor = .clear
         rateFour.backgroundColor = .clear
         rateFive.backgroundColor = .clear
-        mealRating = "3"
+        mealRating = RateAs.three.rawValue
     }
     
     @IBAction func rateFourBtn(_ sender: Any) {
@@ -114,7 +121,7 @@ class MealRatingViewController: UIViewController {
         rateTwo.backgroundColor = .clear
         rateThree.backgroundColor = .clear
         rateFive.backgroundColor = .clear
-        mealRating = "4"
+        mealRating = RateAs.four.rawValue
     }
     
     @IBAction func rateFiveBtn(_ sender: Any) {
@@ -124,27 +131,26 @@ class MealRatingViewController: UIViewController {
         rateTwo.backgroundColor = .clear
         rateThree.backgroundColor = .clear
         rateFour.backgroundColor = .clear
-        mealRating = "5"
+        mealRating = RateAs.five.rawValue
     }
     
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancelRating(_ sender: Any) {
         rateOne.backgroundColor = .clear
         rateTwo.backgroundColor = .clear
         rateThree.backgroundColor = .clear
         rateFour.backgroundColor = .clear
         rateFive.backgroundColor = .clear
-        mealRating.removeAll()
-        mealRateDelegate?.saveRating(mealRating: mealRating)
+        mealRating = nil
+        mealRateDelegate?.saveRating(mealRating: mealRating ?? "")
         //go back to home screen
-        _ = self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
-    
     @IBAction func saveRating(_ sender: Any) {
-        mealRateDelegate?.saveRating(mealRating: mealRating)
+        mealRateDelegate?.saveRating(mealRating: mealRating ?? "")
         //go back to home screen
-        _ = self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
