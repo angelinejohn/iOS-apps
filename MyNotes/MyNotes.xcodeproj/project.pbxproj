@@ -15,6 +15,8 @@
 		087801DA2B0FECE2008C0E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087801D82B0FECE2008C0E7C /* LaunchScreen.storyboard */; };
 		087801E42B0FED77008C0E7C /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087801E32B0FED77008C0E7C /* NotesTableViewController.swift */; };
 		087801E62B0FED85008C0E7C /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087801E52B0FED85008C0E7C /* NoteDetailViewController.swift */; };
+		087801E92B0FEFFA008C0E7C /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087801E72B0FEFFA008C0E7C /* Notes+CoreDataClass.swift */; };
+		087801EA2B0FEFFA008C0E7C /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087801E82B0FEFFA008C0E7C /* Notes+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		087801DB2B0FECE2008C0E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		087801E32B0FED77008C0E7C /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		087801E52B0FED85008C0E7C /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		087801E72B0FEFFA008C0E7C /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		087801E82B0FEFFA008C0E7C /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		087801E22B0FED5F008C0E7C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				087801E72B0FEFFA008C0E7C /* Notes+CoreDataClass.swift */,
+				087801E82B0FEFFA008C0E7C /* Notes+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				087801CB2B0FECE1008C0E7C /* AppDelegate.swift in Sources */,
+				087801E92B0FEFFA008C0E7C /* Notes+CoreDataClass.swift in Sources */,
 				087801E42B0FED77008C0E7C /* NotesTableViewController.swift in Sources */,
+				087801EA2B0FEFFA008C0E7C /* Notes+CoreDataProperties.swift in Sources */,
 				087801E62B0FED85008C0E7C /* NoteDetailViewController.swift in Sources */,
 				087801CD2B0FECE1008C0E7C /* SceneDelegate.swift in Sources */,
 				087801D52B0FECE1008C0E7C /* MyNotes.xcdatamodeld in Sources */,
