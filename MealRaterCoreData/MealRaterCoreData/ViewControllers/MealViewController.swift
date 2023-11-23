@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class MealViewController: UIViewController {
-
+    //outlets and initializations
     @IBOutlet var restaurantName: UITextField!
     @IBOutlet var meal: UITextField!
     @IBOutlet var mealRating: UILabel!
@@ -21,6 +21,9 @@ class MealViewController: UIViewController {
     @IBOutlet var rateFiveBtn: UIButton!
     @IBOutlet var rateThreeBtn: UIButton!
     var selectedMealRating: MealRatings? = nil
+    enum RateMealAs: String {
+        case one, two, three, four, five
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
