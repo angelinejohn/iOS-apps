@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         let alpha = CGFloat.pi
         let randomColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: alpha)
         
+        // for easy debugging
         print("RGB values: \(redColor), \(greenColor), \(blueColor)")
         print("random color: \(randomColor)")
         
