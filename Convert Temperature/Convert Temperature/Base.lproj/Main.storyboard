@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Convert_Temperature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gen-NL-eM2">
+                                <rect key="frame" x="116.66666666666669" y="229" width="160" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="hyh-eI-2sN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eay-Yb-Xjz">
+                                <rect key="frame" x="157.66666666666666" y="406" width="78" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQm-6g-SQy">
+                                <rect key="frame" x="238" y="318" width="140" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Convert to C">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="convertTemperatureToCelcius:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNa-xZ-ibp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw6-gF-pGy">
+                                <rect key="frame" x="16" y="59" width="160" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="LoO-I5-EsC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCr-OO-dqd">
+                                <rect key="frame" x="16" y="318" width="139" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Convert to F">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="convertTemperatureToFarenheit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHs-1P-Mvo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eay-Yb-Xjz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9lb-LF-aot"/>
+                            <constraint firstItem="eay-Yb-Xjz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AiI-b8-Nfx"/>
+                            <constraint firstItem="Gen-NL-eM2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-180" id="BcA-63-zzb"/>
+                            <constraint firstItem="dw6-gF-pGy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GZW-LQ-PP2"/>
+                            <constraint firstItem="GCr-OO-dqd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-111" id="JNg-FI-nnd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dw6-gF-pGy" secondAttribute="bottom" constant="738" id="ZVx-za-p01"/>
+                            <constraint firstItem="GCr-OO-dqd" firstAttribute="top" secondItem="Gen-NL-eM2" secondAttribute="bottom" constant="55" id="f2p-6j-Gbt"/>
+                            <constraint firstItem="Gen-NL-eM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fWs-9T-Jcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dw6-gF-pGy" secondAttribute="trailing" constant="217" id="guy-zf-Vw5"/>
+                            <constraint firstItem="dw6-gF-pGy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pkx-s5-21J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="conversionCount" destination="dw6-gF-pGy" id="wrn-XQ-WA0"/>
+                        <outlet property="temperatureInput" destination="Gen-NL-eM2" id="YA0-NI-fo5"/>
+                        <outlet property="temperatureOutput" destination="eay-Yb-Xjz" id="bWW-wl-zPq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22.137404580152669" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+</document>
