@@ -18,6 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         conversionCount.text = "0 conversions"
+        temperatureInput.becomeFirstResponder()
+    }
+    
+    // function to show the number pad keyboard
+    @IBAction func onClick(_ sender: Any) {
+        temperatureInput.keyboardType = UIKeyboardType.numberPad
+        temperatureInput.keyboardAppearance = UIKeyboardAppearance.default
     }
     
     // function to convert temperature to Farenheit
@@ -26,13 +33,12 @@ class ViewController: UIViewController {
         // (0°C × 9/5) + 32
         if let temperatureEntered = temperatureInput.text {
             if(temperatureEntered == "") {
-                temperatureOutput.text = ""
+                displayOutput(temperature: String(), unit: String(), count: 0)
             } else {
                 if let temperatureInCelcius = Double(temperatureEntered) {
                     let temperatureInFarenheit = temperatureInCelcius * (9/5) + 32
                     conversionCounter += 1
-                    temperatureOutput.text = String(temperatureInFarenheit) + "F"
-                    conversionCount.text = String(conversionCounter) + " conversions"
+                    displayOutput(temperature: String(temperatureInFarenheit), unit: "F", count: conversionCounter)
                 }
             }
         }
@@ -44,16 +50,21 @@ class ViewController: UIViewController {
         // (0°F − 32) × 5/9
         if let temperatureEntered = temperatureInput.text {
             if(temperatureEntered == "") {
-                temperatureOutput.text = ""
+                displayOutput(temperature: String(), unit: String(), count: 0)
             } else {
                 if let temperatureInFarenheit = Double(temperatureEntered) {
                     let temperatureInCelcius = (temperatureInFarenheit - 32) * (5/9)
                     conversionCounter += 1
-                    temperatureOutput.text = String(temperatureInCelcius) + "C"
-                    conversionCount.text = String(conversionCounter) + " conversions"
+                    displayOutput(temperature: String(temperatureInCelcius), unit: "C", count: conversionCounter)
                 }
             }
         }
-    }    
+    }
+    
+    // function to display the output
+    func displayOutput(temperature: String, unit: String, count: Int) {
+        temperatureOutput.text = temperature + unit
+        conversionCount.text = String(conversionCounter) + " conversions"
+    }
 }
 
