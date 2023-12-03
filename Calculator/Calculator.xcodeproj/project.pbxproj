@@ -13,6 +13,7 @@
 		083C490C2B1BCFFE00ADB218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083C490B2B1BCFFE00ADB218 /* Assets.xcassets */; };
 		083C490F2B1BCFFE00ADB218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083C490D2B1BCFFE00ADB218 /* LaunchScreen.storyboard */; };
 		083C49172B1BD08C00ADB218 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C49162B1BD08C00ADB218 /* CalculatorViewController.swift */; };
+		083C49192B1C21BA00ADB218 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C49182B1C21BA00ADB218 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		083C490E2B1BCFFE00ADB218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		083C49102B1BCFFE00ADB218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083C49162B1BD08C00ADB218 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		083C49182B1C21BA00ADB218 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				083C490B2B1BCFFE00ADB218 /* Assets.xcassets */,
 				083C490D2B1BCFFE00ADB218 /* LaunchScreen.storyboard */,
 				083C49102B1BCFFE00ADB218 /* Info.plist */,
+				083C49182B1C21BA00ADB218 /* Enums.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				083C49032B1BCFFD00ADB218 /* AppDelegate.swift in Sources */,
 				083C49172B1BD08C00ADB218 /* CalculatorViewController.swift in Sources */,
+				083C49192B1C21BA00ADB218 /* Enums.swift in Sources */,
 				083C49052B1BCFFD00ADB218 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
