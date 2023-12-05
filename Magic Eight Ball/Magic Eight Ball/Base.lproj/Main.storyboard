@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="rsf-SQ-tlK">
             <objects>
-                <viewController id="0hC-Ya-Yrg" customClass="HomeViewController" customModule="Magic_Eight_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0hC-Ya-Yrg" customClass="MainViewController" customModule="Magic_Eight_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k1g-0M-l2t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask your question" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-jB-idr">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask your question and shake the ball" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-jB-idr">
                                 <rect key="frame" x="16" y="409" width="361" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="AjH-w5-YNm"/>
@@ -31,22 +31,45 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="shakeTheMagicBall:" destination="0hC-Ya-Yrg" eventType="touchUpInside" id="zr1-ly-JpN"/>
+                                    <action selector="getAnswer:" destination="0hC-Ya-Yrg" eventType="touchUpInside" id="214-i9-CWN"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightBallImg" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-xy-eTq">
+                                <rect key="frame" x="34" y="76" width="325" height="325"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-cH-o2v">
+                                <rect key="frame" x="16" y="588.33333333333337" width="361" height="34.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="Uw1-V9-Ifa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="avx-vq-9I6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0Yp-x2-EzS" firstAttribute="top" secondItem="S4B-jB-idr" secondAttribute="bottom" constant="40" id="0rG-dt-cab"/>
                             <constraint firstItem="0Yp-x2-EzS" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="53" id="37c-1t-DyP"/>
+                            <constraint firstItem="5kz-xy-eTq" firstAttribute="centerX" secondItem="S4B-jB-idr" secondAttribute="centerX" id="63X-dQ-huA"/>
+                            <constraint firstItem="5kz-xy-eTq" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="34" id="Hsz-J2-Wi4"/>
                             <constraint firstItem="S4B-jB-idr" firstAttribute="centerY" secondItem="k1g-0M-l2t" secondAttribute="centerY" id="KPU-K4-tA4"/>
+                            <constraint firstItem="vwi-cH-o2v" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="16" id="U8q-Nh-6ao"/>
                             <constraint firstItem="avx-vq-9I6" firstAttribute="trailing" secondItem="0Yp-x2-EzS" secondAttribute="trailing" constant="53" id="VeZ-gL-exD"/>
+                            <constraint firstItem="5kz-xy-eTq" firstAttribute="top" secondItem="k1g-0M-l2t" secondAttribute="topMargin" constant="-79" id="bRd-Oh-dzt"/>
                             <constraint firstItem="S4B-jB-idr" firstAttribute="centerX" secondItem="k1g-0M-l2t" secondAttribute="centerX" id="e2T-CW-job"/>
+                            <constraint firstItem="S4B-jB-idr" firstAttribute="top" secondItem="5kz-xy-eTq" secondAttribute="bottom" constant="8" id="pL8-vn-wax"/>
+                            <constraint firstItem="avx-vq-9I6" firstAttribute="bottom" secondItem="vwi-cH-o2v" secondAttribute="bottom" constant="195" id="pP2-At-tEI"/>
                             <constraint firstItem="avx-vq-9I6" firstAttribute="bottom" secondItem="0Yp-x2-EzS" secondAttribute="bottom" constant="274" id="paf-gW-TRs"/>
+                            <constraint firstItem="avx-vq-9I6" firstAttribute="trailing" secondItem="vwi-cH-o2v" secondAttribute="trailing" constant="16" id="rdY-LJ-Ma1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DtA-5Q-veg"/>
+                    <connections>
+                        <outlet property="answerText" destination="vwi-cH-o2v" id="kGT-63-CK0"/>
+                        <outlet property="getAnswer" destination="0Yp-x2-EzS" id="84A-aZ-1Eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4d-Fm-eOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eightBallImg" width="794" height="795"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
