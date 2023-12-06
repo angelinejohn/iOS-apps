@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import AVFoundation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, AVAudioPlayerDelegate {
+    var audioPlayer: AVAudioPlayer? // play sound while shaking
     var answers = ["It is certain!",
                    "Reply hazy, try again",
                    "Don't count on it",
@@ -37,15 +39,19 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Magic 8 ball"
     }
+    
+    // function when the phone is shaken
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         getAnswer(UIEvent())
     }
     
+    // function when "Shake the ball" button is pressed
     @IBAction func getAnswer(_ sender: Any) {
         answerText.text = getRandomAnswer()
         answerText.isHidden = false
     }
     
+    // function to get answers randomly
     func getRandomAnswer() -> String {
         let random = Int(arc4random_uniform(UInt32(answers.count)))
         let result = answers[random]
@@ -53,4 +59,6 @@ class MainViewController: UIViewController {
        return result
     }
     
+    func playAudio() {
+    }
 }
