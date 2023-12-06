@@ -34,7 +34,7 @@
                                     <action selector="getAnswer:" destination="0hC-Ya-Yrg" eventType="touchUpInside" id="214-i9-CWN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightBallImg" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-xy-eTq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightBallImg" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-xy-eTq">
                                 <rect key="frame" x="34" y="146" width="325" height="325"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" showsExpansionTextWhenTruncated="YES" sizingRule="oversize" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-cH-o2v">
