@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class MainViewController: UIViewController, AVAudioPlayerDelegate {
-    var audioPlayer: AVAudioPlayer? // play sound while shaking
+    var audioPlayer: AVAudioPlayer? // to store the audio player
     var answers = ["It is certain!",
                    "Reply hazy, try again",
                    "Don't count on it",
@@ -43,10 +43,12 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     // function when the phone is shaken
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         getAnswer(UIEvent())
+        playAudio()
     }
     
     // function when "Shake the ball" button is pressed
     @IBAction func getAnswer(_ sender: Any) {
+        playAudio()
         answerText.text = getRandomAnswer()
         answerText.isHidden = false
     }
@@ -60,5 +62,14 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func playAudio() {
+        guard let path = Bundle.main.path(forResource: "Shaking 6", ofType: "wav") else { return }
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Error in loading audio file \(error.localizedDescription)")
+        }
     }
 }

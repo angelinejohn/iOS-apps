@@ -13,6 +13,7 @@
 		083C49302B1C677F00ADB218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083C492F2B1C677F00ADB218 /* Assets.xcassets */; };
 		083C49332B1C677F00ADB218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083C49312B1C677F00ADB218 /* LaunchScreen.storyboard */; };
 		083C493D2B1E2FB900ADB218 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083C493C2B1E2FB900ADB218 /* MainViewController.swift */; };
+		083C493F2B202C9800ADB218 /* Shaking 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 083C493E2B202C9800ADB218 /* Shaking 6.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		083C49322B1C677F00ADB218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		083C49342B1C677F00ADB218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083C493C2B1E2FB900ADB218 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		083C493E2B202C9800ADB218 /* Shaking 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Shaking 6.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		083C49252B1C677D00ADB218 /* Magic Eight Ball */ = {
 			isa = PBXGroup;
 			children = (
+				083C493E2B202C9800ADB218 /* Shaking 6.wav */,
 				083C49262B1C677D00ADB218 /* AppDelegate.swift */,
 				083C49282B1C677D00ADB218 /* SceneDelegate.swift */,
 				083C493C2B1E2FB900ADB218 /* MainViewController.swift */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083C493F2B202C9800ADB218 /* Shaking 6.wav in Resources */,
 				083C49332B1C677F00ADB218 /* LaunchScreen.storyboard in Resources */,
 				083C49302B1C677F00ADB218 /* Assets.xcassets in Resources */,
 				083C492E2B1C677D00ADB218 /* Main.storyboard in Resources */,
