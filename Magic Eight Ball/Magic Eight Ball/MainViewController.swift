@@ -37,6 +37,9 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Magic 8 ball"
     }
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        getAnswer(UIEvent())
+    }
     
     @IBAction func getAnswer(_ sender: Any) {
         answerText.text = getRandomAnswer()
@@ -44,8 +47,8 @@ class MainViewController: UIViewController {
     }
     
     func getRandomAnswer() -> String {
-        var random = Int(arc4random_uniform(UInt32(answers.count)))
-        var result = answers[random]
+        let random = Int(arc4random_uniform(UInt32(answers.count)))
+        let result = answers[random]
         
        return result
     }

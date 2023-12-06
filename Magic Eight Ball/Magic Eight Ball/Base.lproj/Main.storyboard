@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ask your question and shake the ball" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-jB-idr">
-                                <rect key="frame" x="16" y="409" width="361" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shake the phone or shake the ball" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-jB-idr">
+                                <rect key="frame" x="16" y="479" width="361" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="AjH-w5-YNm"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yp-x2-EzS">
-                                <rect key="frame" x="53" y="483" width="287" height="61"/>
+                                <rect key="frame" x="53" y="553" width="287" height="61"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Shake the ball">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
@@ -34,16 +34,14 @@
                                     <action selector="getAnswer:" destination="0hC-Ya-Yrg" eventType="touchUpInside" id="214-i9-CWN"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightBallImg" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-xy-eTq">
-                                <rect key="frame" x="34" y="76" width="325" height="325"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eightBallImg" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-xy-eTq">
+                                <rect key="frame" x="34" y="146" width="325" height="325"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-cH-o2v">
-                                <rect key="frame" x="16" y="588.33333333333337" width="361" height="34.666666666666629"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="361" id="Uw1-V9-Ifa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" showsExpansionTextWhenTruncated="YES" sizingRule="oversize" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-cH-o2v">
+                                <rect key="frame" x="16" y="291" width="361" height="34.666666666666629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                <color key="textColor" systemColor="tableCellBlueTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -54,15 +52,12 @@
                             <constraint firstItem="0Yp-x2-EzS" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="53" id="37c-1t-DyP"/>
                             <constraint firstItem="5kz-xy-eTq" firstAttribute="centerX" secondItem="S4B-jB-idr" secondAttribute="centerX" id="63X-dQ-huA"/>
                             <constraint firstItem="5kz-xy-eTq" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="34" id="Hsz-J2-Wi4"/>
-                            <constraint firstItem="S4B-jB-idr" firstAttribute="centerY" secondItem="k1g-0M-l2t" secondAttribute="centerY" id="KPU-K4-tA4"/>
-                            <constraint firstItem="vwi-cH-o2v" firstAttribute="leading" secondItem="avx-vq-9I6" secondAttribute="leading" constant="16" id="U8q-Nh-6ao"/>
+                            <constraint firstItem="S4B-jB-idr" firstAttribute="centerY" secondItem="k1g-0M-l2t" secondAttribute="centerY" constant="70" id="KPU-K4-tA4"/>
                             <constraint firstItem="avx-vq-9I6" firstAttribute="trailing" secondItem="0Yp-x2-EzS" secondAttribute="trailing" constant="53" id="VeZ-gL-exD"/>
-                            <constraint firstItem="5kz-xy-eTq" firstAttribute="top" secondItem="k1g-0M-l2t" secondAttribute="topMargin" constant="-79" id="bRd-Oh-dzt"/>
+                            <constraint firstItem="5kz-xy-eTq" firstAttribute="top" secondItem="k1g-0M-l2t" secondAttribute="topMargin" constant="-9" id="bRd-Oh-dzt"/>
                             <constraint firstItem="S4B-jB-idr" firstAttribute="centerX" secondItem="k1g-0M-l2t" secondAttribute="centerX" id="e2T-CW-job"/>
                             <constraint firstItem="S4B-jB-idr" firstAttribute="top" secondItem="5kz-xy-eTq" secondAttribute="bottom" constant="8" id="pL8-vn-wax"/>
-                            <constraint firstItem="avx-vq-9I6" firstAttribute="bottom" secondItem="vwi-cH-o2v" secondAttribute="bottom" constant="195" id="pP2-At-tEI"/>
-                            <constraint firstItem="avx-vq-9I6" firstAttribute="bottom" secondItem="0Yp-x2-EzS" secondAttribute="bottom" constant="274" id="paf-gW-TRs"/>
-                            <constraint firstItem="avx-vq-9I6" firstAttribute="trailing" secondItem="vwi-cH-o2v" secondAttribute="trailing" constant="16" id="rdY-LJ-Ma1"/>
+                            <constraint firstItem="avx-vq-9I6" firstAttribute="bottom" secondItem="0Yp-x2-EzS" secondAttribute="bottom" constant="204" id="paf-gW-TRs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DtA-5Q-veg"/>
@@ -98,6 +93,9 @@
         <image name="eightBallImg" width="794" height="795"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
