@@ -61,7 +61,7 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func playAudio() {
-        guard let path = Bundle.main.path(forResource: "Shaking 6", ofType: "wav") else { return }
+        guard let path = Bundle.main.path(forResource: "ShakingSound", ofType: "wav") else { return }
         let url = URL(fileURLWithPath: path)
         
         do {
