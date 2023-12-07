@@ -43,7 +43,6 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     // function when the phone is shaken
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         getAnswer(UIEvent())
-        playAudio()
     }
     
     // function when "Shake the ball" button is pressed
@@ -62,7 +61,7 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func playAudio() {
-        guard let path = Bundle.main.path(forResource: "Shaking 6", ofType: "wav") else { return }
+        guard let path = Bundle.main.path(forResource: "ShakingSound", ofType: "wav") else { return }
         let url = URL(fileURLWithPath: path)
         
         do {
