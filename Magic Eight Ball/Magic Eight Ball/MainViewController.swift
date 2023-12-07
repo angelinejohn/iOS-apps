@@ -43,7 +43,6 @@ class MainViewController: UIViewController, AVAudioPlayerDelegate {
     // function when the phone is shaken
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         getAnswer(UIEvent())
-        playAudio()
     }
     
     // function when "Shake the ball" button is pressed
