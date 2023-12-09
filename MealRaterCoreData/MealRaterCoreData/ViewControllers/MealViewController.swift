@@ -22,7 +22,7 @@ class MealViewController: UIViewController {
     @IBOutlet var rateThreeBtn: UIButton!
     var selectedMealRating: MealRatings? = nil
     enum MealRating: Int {
-        case one, two, three, four, five
+        case one = 1, two, three, four, five
     }
     var cornerRadius: CGFloat = 5
     var borderWidth: CGFloat = 1
