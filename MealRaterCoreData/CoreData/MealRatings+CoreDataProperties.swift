@@ -19,7 +19,7 @@ extension MealRatings {
     @NSManaged public var mID: UUID?
     @NSManaged public var meal: String?
     @NSManaged public var restaurant: String?
-    @NSManaged public var rating: String?
+    @NSManaged public var rating: Int
 
 }
 

@@ -3,7 +3,7 @@
     <entity name="MealRatings" representedClassName="MealRatings" syncable="YES">
         <attribute name="meal" optional="YES" attributeType="String" defaultValueString="default food"/>
         <attribute name="mID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="rating" optional="YES" attributeType="String" defaultValueString="0"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="restaurant" optional="YES" attributeType="String" defaultValueString="default restaurant"/>
     </entity>
 </model>

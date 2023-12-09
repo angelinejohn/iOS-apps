@@ -36,18 +36,20 @@ class MealViewController: UIViewController {
             restaurantName.text = selectedMealRating?.restaurant
             meal.text = selectedMealRating?.meal
             let selectedRating = selectedMealRating?.rating
-//            if  selectedRating == String(MealRating.one) {
-//                rateOneBtn.backgroundColor = .blue
-//            }else if selectedRating == RateMealAs.two.rawValue {
-//                rateTwoBtn.backgroundColor = .blue
-//            }else if selectedRating == RateMealAs.three.rawValue {
-//                rateThreeBtn.backgroundColor = .blue
-//            }else if selectedRating == RateMealAs.four.rawValue {
-//                rateFourBtn.backgroundColor = .blue
-//            }else if selectedRating == RateMealAs.five.rawValue {
-//                rateFiveBtn.backgroundColor = .blue
-//            }
-            mealRating.text = selectedRating
+            guard let rating = MealRating(rawValue: selectedRating ?? 0) else { return }
+            switch rating {
+            case .one:
+                rateOneBtn.backgroundColor = .blue
+            case .two:
+                rateTwoBtn.backgroundColor = .blue
+            case .three:
+                rateThreeBtn.backgroundColor = .blue
+            case .four:
+                rateFourBtn.backgroundColor = .blue
+            case .five:
+                rateFiveBtn.backgroundColor = .blue
+            }
+//            mealRating.text = selectedRating
         }
     }
     
@@ -151,7 +153,7 @@ class MealViewController: UIViewController {
             newMeal.mID = UUID()
             newMeal.meal = meal.text
             newMeal.restaurant = restaurantName.text
-            newMeal.rating = mealRating.text
+            newMeal.rating = (mealRating.text! as NSString).integerValue
             
             //do try context.save()
             if context.hasChanges {
@@ -173,7 +175,7 @@ class MealViewController: UIViewController {
                     if(m == selectedMealRating) {
                         m.meal = meal.text
                         m.restaurant = restaurantName.text
-                        m.rating = mealRating.text
+                        m.rating = (mealRating.text! as NSString).integerValue
                         try context.save()
                         //after saving navigate to root view controller
                         _ = self.navigationController?.popToRootViewController(animated: true)
