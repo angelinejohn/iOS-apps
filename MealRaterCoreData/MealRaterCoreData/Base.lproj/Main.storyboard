@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="y6A-Zr-iED">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Ctd-VT-PkV">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5Yc-ZQ-C9o">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5Yc-ZQ-C9o">
                                 <rect key="frame" x="330" y="5" width="47" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -182,44 +182,44 @@
                                     <action selector="cancel:" destination="tdy-Qm-97t" eventType="touchUpInside" id="h33-C3-Wgr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdc-4X-Fsg">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdc-4X-Fsg">
                                 <rect key="frame" x="85" y="352" width="31.666666666666671" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
                                 <connections>
-                                    <action selector="setRateOne:" destination="tdy-Qm-97t" eventType="touchUpInside" id="pev-fs-8D7"/>
+                                    <action selector="setMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="0Zh-5T-fTY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-AD-Q6x">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-AD-Q6x">
                                 <rect key="frame" x="124" y="352" width="34" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
                                 <connections>
-                                    <action selector="setRateTwo:" destination="tdy-Qm-97t" eventType="touchUpInside" id="cfI-ZC-Tqa"/>
+                                    <action selector="setMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="CH6-zM-Mtl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPC-Ec-AI4">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPC-Ec-AI4">
                                 <rect key="frame" x="207" y="352" width="34.666666666666657" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
                                 <connections>
-                                    <action selector="setRateFour:" destination="tdy-Qm-97t" eventType="touchUpInside" id="Ie2-kN-Sv8"/>
+                                    <action selector="setMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="av6-ru-JTH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-ld-eNd">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-ld-eNd">
                                 <rect key="frame" x="248" y="352" width="45" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
                                 <connections>
-                                    <action selector="setRateFive:" destination="tdy-Qm-97t" eventType="touchUpInside" id="X0Y-Fs-7n9"/>
+                                    <action selector="setMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="htr-u5-2V6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI9-sf-Ol8">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI9-sf-Ol8">
                                 <rect key="frame" x="165" y="352" width="35" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
                                 <connections>
-                                    <action selector="setRateThree:" destination="tdy-Qm-97t" eventType="touchUpInside" id="Zs1-g9-qfv"/>
+                                    <action selector="setMealRating:" destination="tdy-Qm-97t" eventType="touchUpInside" id="qup-Zw-7We"/>
                                 </connections>
                             </button>
                         </subviews>

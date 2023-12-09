@@ -21,12 +21,8 @@ class MealViewController: UIViewController {
     @IBOutlet var rateFiveBtn: UIButton!
     @IBOutlet var rateThreeBtn: UIButton!
     var selectedMealRating: MealRatings? = nil
-    enum RateMealAs: String {
-        case one = "1"
-        case two = "2"
-        case three = "3"
-        case four = "4"
-        case five = "5"
+    enum MealRating: Int {
+        case one, two, three, four, five
     }
     var cornerRadius: CGFloat = 5
     var borderWidth: CGFloat = 1
@@ -40,17 +36,17 @@ class MealViewController: UIViewController {
             restaurantName.text = selectedMealRating?.restaurant
             meal.text = selectedMealRating?.meal
             let selectedRating = selectedMealRating?.rating
-            if  selectedRating == RateMealAs.one.rawValue {
-                rateOneBtn.backgroundColor = .blue
-            }else if selectedRating == RateMealAs.two.rawValue {
-                rateTwoBtn.backgroundColor = .blue
-            }else if selectedRating == RateMealAs.three.rawValue {
-                rateThreeBtn.backgroundColor = .blue
-            }else if selectedRating == RateMealAs.four.rawValue {
-                rateFourBtn.backgroundColor = .blue
-            }else if selectedRating == RateMealAs.five.rawValue {
-                rateFiveBtn.backgroundColor = .blue
-            }
+//            if  selectedRating == String(MealRating.one) {
+//                rateOneBtn.backgroundColor = .blue
+//            }else if selectedRating == RateMealAs.two.rawValue {
+//                rateTwoBtn.backgroundColor = .blue
+//            }else if selectedRating == RateMealAs.three.rawValue {
+//                rateThreeBtn.backgroundColor = .blue
+//            }else if selectedRating == RateMealAs.four.rawValue {
+//                rateFourBtn.backgroundColor = .blue
+//            }else if selectedRating == RateMealAs.five.rawValue {
+//                rateFiveBtn.backgroundColor = .blue
+//            }
             mealRating.text = selectedRating
         }
     }
@@ -83,55 +79,51 @@ class MealViewController: UIViewController {
 
     }
     
-    @IBAction func setRateOne(_ sender: Any) {
-        rateOneBtn.backgroundColor = .blue
-        rateOneBtn.titleLabel?.textColor = .white
-        rateTwoBtn.backgroundColor = .clear
-        rateThreeBtn.backgroundColor = .clear
-        rateFourBtn.backgroundColor = .clear
-        rateFiveBtn.backgroundColor = .clear
-        mealRating.text = RateMealAs.one.rawValue
-    }
-    
-    @IBAction func setRateTwo(_ sender: Any) {  
-        rateTwoBtn.backgroundColor = .blue
-        rateTwoBtn.titleLabel?.textColor = .white
-        rateOneBtn.backgroundColor = .clear
-        rateThreeBtn.backgroundColor = .clear
-        rateFourBtn.backgroundColor = .clear
-        rateFiveBtn.backgroundColor = .clear
-        mealRating.text = RateMealAs.two.rawValue
-    }
-    
-    @IBAction func setRateThree(_ sender: Any) {
-        rateThreeBtn.backgroundColor = .blue
-        rateThreeBtn.titleLabel?.textColor = .white
-        rateOneBtn.backgroundColor = .clear
-        rateTwoBtn.backgroundColor = .clear
-        rateFourBtn.backgroundColor = .clear
-        rateFiveBtn.backgroundColor = .clear
-        mealRating.text = RateMealAs.three.rawValue
-    }
-    
-    
-    @IBAction func setRateFour(_ sender: Any) {
-        rateFourBtn.backgroundColor = .blue
-        rateFourBtn.titleLabel?.textColor = .white
-        rateOneBtn.backgroundColor = .clear
-        rateTwoBtn.backgroundColor = .clear
-        rateThreeBtn.backgroundColor = .clear
-        rateFiveBtn.backgroundColor = .clear
-        mealRating.text = RateMealAs.four.rawValue
-    }
-    
-    @IBAction func setRateFive(_ sender: Any) {
-        rateFiveBtn.backgroundColor = .blue
-        rateFiveBtn.titleLabel?.textColor = .white
-        rateOneBtn.backgroundColor = .clear
-        rateTwoBtn.backgroundColor = .clear
-        rateThreeBtn.backgroundColor = .clear
-        rateFourBtn.backgroundColor = .clear
-        mealRating.text = RateMealAs.five.rawValue
+    @IBAction func selectMealRating(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            rateOneBtn.backgroundColor = .blue
+            rateOneBtn.titleLabel?.textColor = .white
+            rateTwoBtn.backgroundColor = .clear
+            rateThreeBtn.backgroundColor = .clear
+            rateFourBtn.backgroundColor = .clear
+            rateFiveBtn.backgroundColor = .clear
+//            mealRating.text = MealRating.one
+        case 2:
+            rateTwoBtn.backgroundColor = .blue
+            rateTwoBtn.titleLabel?.textColor = .white
+            rateOneBtn.backgroundColor = .clear
+            rateThreeBtn.backgroundColor = .clear
+            rateFourBtn.backgroundColor = .clear
+            rateFiveBtn.backgroundColor = .clear
+//            mealRating.text = RateMealAs.two.rawValue
+        case 3:
+            rateThreeBtn.backgroundColor = .blue
+            rateThreeBtn.titleLabel?.textColor = .white
+            rateOneBtn.backgroundColor = .clear
+            rateTwoBtn.backgroundColor = .clear
+            rateFourBtn.backgroundColor = .clear
+            rateFiveBtn.backgroundColor = .clear
+//            mealRating.text = RateMealAs.three.rawValue
+        case 4:
+            rateFourBtn.backgroundColor = .blue
+            rateFourBtn.titleLabel?.textColor = .white
+            rateOneBtn.backgroundColor = .clear
+            rateTwoBtn.backgroundColor = .clear
+            rateThreeBtn.backgroundColor = .clear
+            rateFiveBtn.backgroundColor = .clear
+//            mealRating.text = RateMealAs.four.rawValue
+        case 5:
+            rateFiveBtn.backgroundColor = .blue
+            rateFiveBtn.titleLabel?.textColor = .white
+            rateOneBtn.backgroundColor = .clear
+            rateTwoBtn.backgroundColor = .clear
+            rateThreeBtn.backgroundColor = .clear
+            rateFourBtn.backgroundColor = .clear
+//            mealRating.text = RateMealAs.five.rawValue
+        default:
+            return
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -192,7 +184,5 @@ class MealViewController: UIViewController {
                 print(error)
             }
         }
-        
-        
     }
 }
