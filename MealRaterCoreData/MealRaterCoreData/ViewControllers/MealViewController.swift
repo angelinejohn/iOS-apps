@@ -80,49 +80,48 @@ class MealViewController: UIViewController {
     }
     
     @IBAction func selectMealRating(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
+        guard let buttonTag = MealRating(rawValue: sender.tag) else { return }
+        switch buttonTag {
+        case .one:
             rateOneBtn.backgroundColor = .blue
             rateOneBtn.titleLabel?.textColor = .white
             rateTwoBtn.backgroundColor = .clear
             rateThreeBtn.backgroundColor = .clear
             rateFourBtn.backgroundColor = .clear
             rateFiveBtn.backgroundColor = .clear
-//            mealRating.text = MealRating.one
-        case 2:
+            mealRating.text = String(MealRating.one.rawValue)
+        case .two:
             rateTwoBtn.backgroundColor = .blue
             rateTwoBtn.titleLabel?.textColor = .white
             rateOneBtn.backgroundColor = .clear
             rateThreeBtn.backgroundColor = .clear
             rateFourBtn.backgroundColor = .clear
             rateFiveBtn.backgroundColor = .clear
-//            mealRating.text = RateMealAs.two.rawValue
-        case 3:
+            mealRating.text = String(MealRating.two.rawValue)
+        case .three:
             rateThreeBtn.backgroundColor = .blue
             rateThreeBtn.titleLabel?.textColor = .white
             rateOneBtn.backgroundColor = .clear
             rateTwoBtn.backgroundColor = .clear
             rateFourBtn.backgroundColor = .clear
             rateFiveBtn.backgroundColor = .clear
-//            mealRating.text = RateMealAs.three.rawValue
-        case 4:
+            mealRating.text = String(MealRating.three.rawValue)
+        case .four:
             rateFourBtn.backgroundColor = .blue
             rateFourBtn.titleLabel?.textColor = .white
             rateOneBtn.backgroundColor = .clear
             rateTwoBtn.backgroundColor = .clear
             rateThreeBtn.backgroundColor = .clear
             rateFiveBtn.backgroundColor = .clear
-//            mealRating.text = RateMealAs.four.rawValue
-        case 5:
+            mealRating.text = String(MealRating.four.rawValue)
+        case .five:
             rateFiveBtn.backgroundColor = .blue
             rateFiveBtn.titleLabel?.textColor = .white
             rateOneBtn.backgroundColor = .clear
             rateTwoBtn.backgroundColor = .clear
             rateThreeBtn.backgroundColor = .clear
             rateFourBtn.backgroundColor = .clear
-//            mealRating.text = RateMealAs.five.rawValue
-        default:
-            return
+            mealRating.text = String(MealRating.five.rawValue)
         }
     }
     
