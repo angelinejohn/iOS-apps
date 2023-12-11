@@ -46,7 +46,7 @@ extension MealsTableViewController: UITableViewDelegate, UITableViewDataSource {
         let mealRatingCell = table.dequeueReusableCell(withIdentifier: "MealRatingCell", for: indexPath) as! MealRatingTableViewCell
         let currentMealRating = listOfMealRatings[indexPath.row]
         mealRatingCell.mealName.text = currentMealRating.meal
-//        mealRatingCell.mealRating.text = currentMealRating.rating
+        mealRatingCell.mealRating.text = String(currentMealRating.rating)
         
         return mealRatingCell
     }
