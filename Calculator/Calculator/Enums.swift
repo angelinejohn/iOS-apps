@@ -9,13 +9,13 @@ import Foundation
 
 enum Operation: String {
     case addition = "+"
-    case subtract = "-"
-    case multiply = "*"
-    case divide = "/"
+    case subtraction = "-"
+    case multiplication = "*"
+    case division = "/"
     case null = ""
 }
 
 enum CalculatorState: String {
-    case inputMode = "inputMode"
-    case continueInputMode = "continueInputMode"
+    case inputMode = "inputMode" // to add one number after another in the display
+    case newInputMode = "newInputMode" // to add a new number altogether
 }
