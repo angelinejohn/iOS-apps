@@ -14,6 +14,7 @@ class CalculatorViewController: UIViewController {
     var currentOperation: Operation = Operation.null
     var currentCalculatorState: CalculatorState = CalculatorState.inputMode
     var firstValue: String = Operation.null.rawValue
+    var nextValue: String = Operation.null.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,22 @@ class CalculatorViewController: UIViewController {
         if firstValue.isEmpty {
             return
         }
+        
+        switch currentOperation {
+        case .addition:
+            result = Double(firstValue)! + Double(calculatorDisplay.text!)!
+        case .subtraction:
+            result = Double(firstValue)! - Double(calculatorDisplay.text!)!
+        case .multiplication:
+            result = Double(firstValue)! * Double(calculatorDisplay.text!)!
+        case .division:
+            result = Double(firstValue)! / Double(calculatorDisplay.text!)!
+        case .null:
+            return
+        }
+        
+        calculatorDisplay.text = String(result)
+        currentCalculatorState = CalculatorState.newInputMode
     }
     
     // function to clear the last number from the display
