@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Location Identifier
 //
-//  Created by Angeline Flora John on 12/15/23.
+//  Created by ajohn on 12/15/23.
 //
 
 import UIKit
