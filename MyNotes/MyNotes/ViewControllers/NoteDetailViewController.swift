@@ -2,7 +2,7 @@
 //  NoteDetailViewController.swift
 //  MyNotes
 //
-//  Created by Angeline Flora John on 11/23/23.
+//  Created by ajohn on 11/23/23.
 //
 
 import UIKit
