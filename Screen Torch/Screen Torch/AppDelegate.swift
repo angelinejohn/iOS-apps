@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Screen Torch
 //
-//  Created by Angeline Flora John on 12/1/23.
+//  Created by ajohn on 12/1/23.
 //
 
 import UIKit
