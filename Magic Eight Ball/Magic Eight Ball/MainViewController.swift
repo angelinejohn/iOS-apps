@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  Magic Eight Ball
 //
-//  Created by Angeline Flora John on 12/4/23.
+//  Created by ajohn on 12/4/23.
 //
 
 import UIKit
