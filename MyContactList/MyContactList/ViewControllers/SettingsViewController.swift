@@ -2,7 +2,7 @@
 //  SettingsViewController.swift
 //  MyContactList
 //
-//  Created by Angeline Flora John on 11/26/23.
+//  Created by ajohn on 11/26/23.
 //
 
 import UIKit
