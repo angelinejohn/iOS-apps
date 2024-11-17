@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TipCalculator
 //
-//  Created by Angeline Flora John on 9/3/23.
+//  Created by ajohn on 9/3/23.
 //
 
 import UIKit
