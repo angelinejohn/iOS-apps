@@ -2,7 +2,7 @@
 //  Enums.swift
 //  Calculator
 //
-//  Created by Angeline Flora John on 12/2/23.
+//  Created by ajohn on 12/2/23.
 //
 
 import Foundation
