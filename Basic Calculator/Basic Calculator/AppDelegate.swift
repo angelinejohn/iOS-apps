@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Basic Calculator
 //
-//  Created by Angeline Flora John on 11/27/23.
+//  Created by ajohn on 11/27/23.
 //
 
 import UIKit
