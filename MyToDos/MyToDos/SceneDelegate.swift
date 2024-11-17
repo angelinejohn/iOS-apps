@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  MyToDos
 //
-//  Created by Angeline Flora John on 11/30/23.
+//  Created by ajohn on 11/30/23.
 //
 
 import UIKit
