@@ -2,7 +2,7 @@
 //  MealsViewController.swift
 //  MealRater
 //
-//  Created by Angeline Flora John on 11/5/23.
+//  Created by ajohn on 11/5/23.
 //
 
 import UIKit
